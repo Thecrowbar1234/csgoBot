@@ -26,3 +26,16 @@ def replaceWeaponName(weapon) :
 	elif search.find("g3") or search.find("sg1") != -1 :
 		return "G3SG1%20"
 	#SMGs
+
+def replaceWeaponWear(wear) :
+	search = wear.lower()
+	if search.find("fn") != -1 :
+		return "%28Factory%20New%29"
+	elif search.find("mw") != -1 :
+		return "%28Minimal%20Wear%29"
+	elif search.find("ft") != -1 :
+		return "%28Field-Tested%29"
+	elif search.find("ww") != -1 :
+		return "%28Well-Worn%29"
+	elif search.find("bs") != -1 :
+		return "%28Battle-Scarred%29"
