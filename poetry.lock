@@ -52,6 +52,32 @@ tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)"
 tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "mypy (>=0.900,!=0.940)", "pytest-mypy-plugins", "cloudpickle"]
 
 [[package]]
+name = "beautifulsoup4"
+version = "4.11.1"
+description = "Screen-scraping library"
+category = "main"
+optional = false
+python-versions = ">=3.6.0"
+
+[package.dependencies]
+soupsieve = ">1.2"
+
+[package.extras]
+html5lib = ["html5lib"]
+lxml = ["lxml"]
+
+[[package]]
+name = "bs4"
+version = "0.0.1"
+description = "Dummy package for Beautiful Soup"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+beautifulsoup4 = "*"
+
+[[package]]
 name = "charset-normalizer"
 version = "2.1.1"
 description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
@@ -123,6 +149,14 @@ optional = false
 python-versions = ">=3.8"
 
 [[package]]
+name = "soupsieve"
+version = "2.3.2.post1"
+description = "A modern CSS selector implementation for Beautiful Soup."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "steammarket"
 version = "0.2.7"
 description = "A Python API for getting prices from the Steam market."
@@ -145,13 +179,15 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "14bd7487da29deabced96b4c1aa88b82ba95d8fe2c18d9d97d1ad7a0ba888c24"
+content-hash = "f646abbb279e27477b13c6b3e9971f9729afb64f1b3ab6e700592eccea9c3c2f"
 
 [metadata.files]
 aiohttp = []
 aiosignal = []
 async-timeout = []
 attrs = []
+beautifulsoup4 = []
+bs4 = []
 charset-normalizer = []
 discord = []
 "discord.py" = []
@@ -159,8 +195,6 @@ frozenlist = []
 idna = []
 multidict = []
 numpy = []
-steammarket = [
-    {file = "steammarket-0.2.7-py3-none-any.whl", hash = "sha256:809ad13470bc509e7084b316d85252a73d120b965756534d5546244bf4017c73"},
-    {file = "steammarket-0.2.7.tar.gz", hash = "sha256:05d247346aeb3ef562ffe11cf4051d8991b7efa88262ced5801419b414e08ff7"},
-]
+soupsieve = []
+steammarket = []
 yarl = []

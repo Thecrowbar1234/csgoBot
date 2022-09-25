@@ -3,6 +3,7 @@ import steammarket as steam
 from discord.ext import commands
 import os
 import searchFunction as searchMod
+import getImage
 discordToken = os.environ['DiscordToken']
 
 client = commands.Bot(command_prefix='c$', intents=discord.Intents.all())
@@ -42,7 +43,7 @@ async def searchMarket(ctx, condition, statTrakAndSouvenir, weapon, *args) :
 	await ctx.channel.send(message)
 
 @client.command()
-async def test(ctx, weapon) :
-	print(searchMod.replaceWeaponName(weapon))
+async def test(ctx) :
+	getImage.getImage()
 
 client.run(discordToken)
