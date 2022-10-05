@@ -14,6 +14,7 @@ async def on_ready() :
 #, weapon, wear, statTrak, Souvenir, *args
 @client.command()
 async def searchMarket(ctx, condition, statTrakAndSouvenir, weapon, *args) :
+	#ddddd
 	if int(statTrakAndSouvenir) == 1 :
 		print("true")
 		search = "https://steamcommunity.com/market/listings/730/StatTrak™%20"
